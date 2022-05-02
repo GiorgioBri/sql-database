@@ -96,3 +96,7 @@ select *
 from romanzo, Personaggio, PersonaggioRomanzo
 where personaggio.nome = "Harry" and ((personaggio.id = PersonaggioRomanzo.personaggio) and (romanzo.id = PersonaggioRomanzo.romanzo))
 
+/*Romanzi non presenti in archivio*/
+select *
+from romanzo R left join autore A on R.autore = A.ID
+where A.ID is null
