@@ -30,7 +30,7 @@ from romanzo, autore
 where romanzo.autore = autore.ID and autore.Nazionalità = "russo"
 order by autore.cognome
 
-/*Titolo e autore del XX secolo, ordine alfabetico (a parità di autore in ordine cronoligico)*/
+/*Autore del XX secolo, ordine alfabetico (a parità di autore in ordine cronoligico)*/
 select romanzo.Titolo
 from romanzo, autore
 where romanzo.autore = autore.id and (autore.DataNascita > 1809 and autore.DataNascita < 2000)
