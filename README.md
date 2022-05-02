@@ -1,3 +1,3 @@
 # sql-database
 
-Modifico qualcosa nel ReadMe *Da Giorgio* 
+Modifico qualcosa nel ReadMe *Da Giorgio*
