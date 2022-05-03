@@ -5,3 +5,4 @@ select Programmatore.Codice, Programma.Anno
 from Programmatore join Autore on Programmatore.Codice = Autore.Codice
     join Programma on Programma.ID = Autore.ID
 where Programmatore.Categoria = 10 and Programma.Linguaggio != "Java"
+group by Programmatore.Codice
