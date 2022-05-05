@@ -1,16 +1,18 @@
-/*Codice e nome programmatori che hanno scritto programmi solo in Java*/
+/*Codice e nome programmatori che hanno scritto
+ programmi solo in Java*/
 
-/*select Programmatore.nome, Programmatore.codice
-from Programmatore join Autore on Programmatore.codice = Autore.codice
-        join Programma on Programma.id = Autore.id
-where Programma.linguaggio = 'Java'*/
+/*
+select Programmatore.Nome, Programmatore.Codice
+from Programmatore join Autore on Programmatore.Codice = Autore.Codice
+        join Programma on Programma.ID = Autore.ID
+where Programma.linguaggio = 'Java'
+*/
 
-select 
-from 
-where 
-
-union 
-
-select 
-from 
-where 
+select Programmatore.Codice, Programmatore.Nome
+from Autore join Programmatore on Autore.Codice = Programmatore.Codice
+    join Programma  on Autore.ID = Programma.ID
+where Programma.Linguaggio in
+        (select Programma.Linguaggio
+        from Programma 
+        where Programma.Linguaggio = 'Java')
+group by programma.Linguaggio
